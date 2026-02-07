@@ -1,4 +1,4 @@
-# 🔗 Job Share
+# 🔗 OppSeek
 
 > Share job opportunities instantly with friends using unique connection codes
 
