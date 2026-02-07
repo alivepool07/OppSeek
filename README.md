@@ -235,7 +235,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 👨‍💻 Author
 
-**Jyoti** ([@alivepool07](https://github.com/alivepool07))
+**Anand** ([@alivepool07](https://github.com/alivepool07))
 
 - 📧 Email: alivepool07@gmail.com
 - 💼 GitHub: [@alivepool07](https://github.com/alivepool07)
