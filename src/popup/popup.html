@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OppSeek</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>OppSeek</h1>
+      <button id="settingsBtn" class="icon-btn">⚙️</button>
+    </header>
+
+    <!-- Main View -->
+    <div id="mainView">
+      <!-- Connection Code Display -->
+      <div class="section">
+        <h3>Your Connection Code</h3>
+        <div class="code-display">
+          <span id="connectionCode">------</span>
+          <button id="copyCodeBtn" class="btn-secondary">Copy</button>
+        </div>
+      </div>
+
+      <!-- Add Friend -->
+      <div class="section">
+        <h3>Add Friend</h3>
+        <div class="input-group">
+          <input type="text" id="friendCodeInput" placeholder="Enter friend's code" maxlength="6">
+          <button id="addFriendBtn" class="btn-primary">Add</button>
+        </div>
+        <div id="addFriendStatus" class="status-message"></div>
+      </div>
+
+      <!-- Friends List -->
+      <div class="section">
+        <h3>Friends (<span id="friendCount">0</span>)</h3>
+        <div id="friendsList" class="list">
+          <div class="loader-container" id="friendsLoader">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shared Jobs with Tabs -->
+      <div class="section jobs-section">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="received">
+            📥 Received (<span id="receivedCount">0</span>)
+          </button>
+          <button class="tab-btn" data-tab="sent">
+            📤 Sent (<span id="sentCount">0</span>)
+          </button>
+        </div>
+
+        <div id="receivedTab" class="tab-content active">
+          <div id="jobsList" class="list">
+            <div class="loader-container" id="jobsLoader">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sentTab" class="tab-content hidden">
+          <div id="sentJobsList" class="list">
+            <div class="loader-container" id="sentJobsLoader">
+              <div class="loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share View -->
+    <div id="shareView" class="hidden">
+      <h3>Share Job</h3>
+      <div id="jobPreview" class="job-preview"></div>
+
+      <div class="section">
+        <h4>Select Friends</h4>
+        <div id="friendsCheckboxList" class="checkbox-list"></div>
+      </div>
+
+      <div class="section">
+        <h4>Add Note (Optional)</h4>
+        <textarea id="shareNote" placeholder="Add a note for your friends..." rows="3"></textarea>
+      </div>
+
+      <div class="button-group">
+        <button id="cancelShareBtn" class="btn-secondary">Cancel</button>
+        <button id="confirmShareBtn" class="btn-primary">Share</button>
+      </div>
+    </div>
+
+    <!-- Settings View -->
+    <div id="settingsView" class="hidden">
+      <div class="section">
+        <h3>⬅️ <span id="backToMain" style="cursor: pointer;">Back</span></h3>
+      </div>
+
+      <div class="section">
+        <h3>Your Display Name</h3>
+        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">This is how friends will see you</p>
+        <div class="input-group">
+          <input type="text" id="displayNameInput" placeholder="Enter your name" maxlength="20">
+          <button id="saveNameBtn" class="btn-primary">Save</button>
+        </div>
+        <div id="saveNameStatus" class="status-message"></div>
+      </div>
+
+      <div class="section">
+        <h3>Your Connection Code</h3>
+        <div class="code-display">
+          <span id="settingsCode">------</span>
+          <button id="copyCodeBtn2" class="btn-secondary">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with Chai Link -->
+    <footer class="footer">
+      <a id="chaiLink" class="chai-link">
+        ☕ Buy me a <span class="strikethrough">coffee</span> Chai
+      </a>
+    </footer>
+
+    <!-- QR Modal -->
+    <div id="qrModal" class="qr-modal hidden">
+      <h3>☕ Support OppSeek</h3>
+      <img id="qrImage" src="" alt="QR Code">
+      <p>Scan to buy me a chai!</p>
+      <button id="closeQrBtn" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="/libs/firebase-app-compat.js"></script>
+  <script src="/libs/firebase-auth-compat.js"></script>
+  <script src="/libs/firebase-firestore-compat.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
