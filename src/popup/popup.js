@@ -702,3 +702,7 @@ function hideQrModal() {
 function checkPendingShare() {
 
 }
+// Handle pending share
+function handlePendingShare() {
+
+}
