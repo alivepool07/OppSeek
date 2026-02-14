@@ -707,3 +707,7 @@ function checkPendingShare() {
 function managefriends() {
 
 }
+
+function managejobs() {
+
+} 
