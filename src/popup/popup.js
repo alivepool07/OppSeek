@@ -703,11 +703,7 @@ function checkPendingShare() {
 
 }
 
-
 function managefriends() {
-
+  // do anything like something
 }
 
-function managejobs() {
-
-} 
