@@ -183,3 +183,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function testingDocGuard() {
   //dkjfviudhv
 }
+
+function testingDocGuard2() {
+  //dkjfviudhv
+} 
