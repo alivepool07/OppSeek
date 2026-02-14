@@ -178,3 +178,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   }
   return true;
 });
+
+
+//does nothing for now
+function managejobs() {
+
+}
