@@ -180,7 +180,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 
-//does nothing for now
-function managejobs() {
-
+function testingDocGuard() {
+  //dkjfviudhv
 }
