@@ -697,3 +697,13 @@ function showQrModal() {
 function hideQrModal() {
   qrModal.classList.add('hidden');
 }
+
+// Check for pending share
+function checkPendingShare() {
+
+}
+
+function managefriends() {
+  // do anything like something
+}
+
